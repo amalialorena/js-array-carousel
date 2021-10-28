@@ -94,7 +94,7 @@ document.querySelector(".arrow-down").addEventListener("click",
     document.querySelector(".container-thumbs img.active").classList.remove("active");
     
     //se è selezionato l'ultimo elemento della lista, il conteggio ricomincia dal primo elemento
-    if(selectedElement === 5) {
+    if(selectedElement === items.length) {
         selectedElement = 0
     }
     // al click si aggiunge la classe active sul elemento selezionato
@@ -110,7 +110,7 @@ document.querySelector(".arrow-up").addEventListener("click",
         --selectedElement; 
     //se è selezionato il primo elemento della lista, il conteggio ricomincia dall'ultimo elemento
         if(selectedElement === -1) {
-            selectedElement = 4
+            selectedElement = items.length -1
         }
      //togliamo la classe active sul primo elemento 
     document.querySelector(".card.active").classList.remove("active");

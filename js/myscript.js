@@ -82,18 +82,18 @@ thumbContainer.innerHTML += thumb;
 // Aggiungere il click sulle frecce per cambiare i contenuti
 
 // al click sulla freccia in basso, l'elemento dell'array aumenta di 1
-// al click sulla freccia in alto, l'elemento dell'array diminuisce di 1
-    
+
 let selectedElement = 0;
 
 document.querySelector(".arrow-down").addEventListener("click", 
     function(){  
     ++selectedElement;     
     
-    
+    //togliamo la classe active sul primo elemento 
     document.querySelector(".card.active").classList.remove("active");
     document.querySelector(".container-thumbs img.active").classList.remove("active");
-
+    
+    //se è selezionato l'ultimo elemento della lista, il conteggio ricomincia dal primo elemento
     if(selectedElement === 5) {
         selectedElement = 0
     }
@@ -104,13 +104,15 @@ document.querySelector(".arrow-down").addEventListener("click",
 
 )
 
+// al click sulla freccia in alto, l'elemento dell'array diminuisce di 1
 document.querySelector(".arrow-up").addEventListener("click", 
     function(){  
         --selectedElement; 
+    //se è selezionato il primo elemento della lista, il conteggio ricomincia dall'ultimo elemento
         if(selectedElement === -1) {
             selectedElement = 4
         }
-       
+     //togliamo la classe active sul primo elemento 
     document.querySelector(".card.active").classList.remove("active");
     document.querySelector(".container-thumbs img.active").classList.remove("active");
 

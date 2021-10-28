@@ -6,7 +6,9 @@
 
 #carousel {
    display: flex;
-   justify-content: center;   
+   justify-content: center; 
+   align-items: center;  
+   height: 100vh;
 }
 
 .container-thumbs {
@@ -21,15 +23,17 @@
 }
 
 .card img {
-    width: 100%;
+    height:100%;
 }
 
 .card {
     position: relative;
     color: white;
-    width: 956px;
     display: none;
-    
+    object-fit: cover;
+    overflow: hidden;
+    height: 57vh;
+    max-width: 800px;
     
 }
 
